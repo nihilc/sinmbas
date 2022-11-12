@@ -1,0 +1,266 @@
+/* Basic */
+body {
+  font-size: 16px;          
+  font-family: Helvetica, Arial, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-fg);
+}
+iframe {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  padding: 20px;
+}
+/* Css Grid */
+.grid-layout {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  gap: 10px;
+
+  display: grid;
+  grid-template-columns: auto 330px ;
+  grid-template-rows: auto  auto auto auto;
+  grid-template-areas:
+  'head head'
+  'nav nav'
+  'main aside'
+  'foot foot';
+}
+.grid-layout.active{
+  grid-template-areas:
+  'head head'
+  'nav nav'
+  'main main'
+  'foot foot';
+}
+.grid-layout > *{
+  background: var(--color-n-black);
+  border-radius: 10px;
+}
+.grid-layout__head {
+  grid-area: head;
+}
+.grid-layout__nav {
+  grid-area: nav;
+}
+.grid-layout__aside {
+  grid-area: aside;
+}
+.grid-layout__aside.active {
+  display: none;
+}
+.grid-layout__main {
+  grid-area: main;
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+}
+.grid-layout__foot {
+  grid-area: foot;
+}
+.aside__btn-toggle{
+  width: 20px; 
+  height: 30px; 
+  padding-left: 5px;
+  background: var(--color-bg);
+  color: var(--color-n-white);
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px 0px 0px 10px;
+}
+.aside__btn-toggle:hover {
+  color: var(--color-n-red);
+}
+
+/*****************************/
+/* Menu /          Christian */
+/*****************************/
+.nav-bar{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: space-between;
+}
+.nav-bar > *{
+  font-size: 1rem;
+  padding: 10px;
+}
+.nav-bar__item{
+  display: inline-block;
+}
+.nav-bar__link{
+  color: var(--color-fg);
+  padding: 0 10px;
+  border-radius: .5em;
+  font-weight: bold;
+  text-decoration: none;
+  transition: linear .3s;
+}
+.nav-bar__link:hover{
+  color: var(--color-n-blue);
+}
+.nav-bar__buttons button{
+  width: 4rem;
+  margin: 0 5px;
+  padding: 5px 5px;
+  border: none;
+  border-radius: .7rem;
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: linear .3s;
+  cursor: pointer;
+}
+.nav-bar__button-account{
+  background: var(--color-n-green);
+}
+.nav-bar__button-account:hover{
+  background: var(--color-b-green);
+}
+.nav-bar__button-notify{
+  background: var(--color-n-yellow);
+}
+.nav-bar__button-notify:hover{
+  background: var(--color-b-yellow);
+}
+.nav-bar__button-help{
+  background: var(--color-n-magenta);
+}
+.nav-bar__button-help:hover{
+  background: var(--color-b-magenta);
+}
+.nav-bar__button-logout{
+  background: var(--color-n-red);
+}
+.nav-bar__button-logout:hover{
+  background: var(--color-b-red);
+}
+
+/*****************************/
+/* Header /   Yesid y Camilo */
+/*****************************/
+.grid-layout__head{
+  background-image: url("../img/fondo.png"); /*Imagen de fondo*/
+  background-size: 102% 150%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.header {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+.header__logo {
+  width: 140px;
+  height: 110px;
+  float: left;
+}
+.header__contenido{
+  margin-left: 20px;
+}
+.header__titulo {
+  font-size: 280%;
+  letter-spacing: 3px;
+  margin-bottom: 1px;
+  color: var(--color-n-green);
+  display: flex;
+  
+}
+.header__texto {
+  font-size: 80%;
+  font-weight: 100px;
+  color: var(--color-n-green);
+  display: flex;
+}
+
+/*****Footer*****/
+/**Steven López**/
+/****************/
+.footer {
+  padding: 10px;
+  display: flex;
+  justify-content:space-around;
+  background-color: var(--color-d-bg);
+  border-radius: 10px;
+  gap: 30px;
+}
+
+.footer__titulo {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 18px;
+  border-bottom: 2px solid var(--color-n-magenta);
+  text-decoration: none;
+}
+
+.footer__item {
+  margin: 4px 0;
+}
+
+.footer__link {
+  color: var(--color-n-blue);
+  text-decoration: none;
+  border-radius: 5px;
+  height: 100px;
+  width: 100px;
+  transition: background-color 0.2s, transform 0.2s;
+  transition-delay: 0.5s;
+}
+
+.footer__items{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.footer__items > *{
+  flex-grow: 1;
+}
+
+
+
+.footer__link > i {
+  font-size: 24px;
+  margin: 5px 10px; 
+}
+
+.footer__text {
+  text-align: center;
+}
+
+.footer__logo{
+  border-radius: 50%;
+  width: 100px;
+  height: auto;
+}
+.footer__card1{
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+.footer__card2 {
+  flex: 4 1 0;
+  line-height: 170%;
+}
+.footer__card3 {
+  flex: 1 1 0;
+  line-height: 170%;
+}
+.footer__card4 {
+  flex: 2 1 0;
+}
+
+.footer__card4 i{
+  font-size: 30px;
+}
+.footer__card4 li{
+  display: inline-block;
+  text-align: center;
+}
+.footer__link i:hover{
+  color: var(--color-b-blue);
+}
