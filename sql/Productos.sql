@@ -1,3 +1,14 @@
+insert into Categorias (id, name, info) values 
+  (1, 'Bebidas gaseosas', 'Bebidas azucaradas con gas'),
+  (2, 'Bebidas lacteas', 'Bebidas en base de lacteos'),
+  (3, 'Bebidas Alcoholicas', 'Bebidas embriagantes'),
+  (4, 'Quesos', 'Quesos narutales'),
+  (5, 'Frutas', 'Frutas de origen natural'),
+  (6, 'Verduras', 'Verduras de origen natural'),
+  (7, 'Dulces', 'Variedad de tipos de dulces'),
+  (8, 'Paquetes', 'Paquetes de golosinas saladas'),
+  (9, 'Limpieza', 'Productos de limpieza para el hogar'),
+  (10, 'Papeleria', 'Papel, cartulinas, lapices, etc');
 insert into Productos (id, name, stock, price, info, Categorias_id, Proveedores_id) values (1, 'Wine - Balbach Riverside', 198, 6435, 'turpis donec posuere metus', 7, 22);
 insert into Productos (id, name, stock, price, info, Categorias_id, Proveedores_id) values (2, 'Sauce Tomato Pouch', 219, 8441, 'ridiculus mus etiam vel', 8, 38);
 insert into Productos (id, name, stock, price, info, Categorias_id, Proveedores_id) values (3, 'Bar Mix - Pina Colada, 355 Ml', 163, 4161, 'in purus eu magna', 5, 17);
