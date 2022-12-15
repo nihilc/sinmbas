@@ -148,6 +148,16 @@ body {
 .form__input-textarea {
   height: 40px;
 }
+.form__error {
+  display: flex;
+  margin: 0 0 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background: var(--color-n-red);
+  color: var(--color-n-black);
+  font-size: .75rem;
+  font-weight: bold;
+}
 .form__btns {
   display: flex;
   margin-top: auto;
@@ -162,10 +172,10 @@ body {
   transition: .5s;
 }
 .form__btn-cancel {
-  background: var(--color-n-red);
+  background: var(--color-n-magenta);
 }
 .form__btn-cancel:hover {
-  background: var(--color-b-red);
+  background: var(--color-b-magenta);
 }
 .form__btn-submit {
   background: var(--color-n-green);
